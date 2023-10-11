@@ -2,16 +2,15 @@ Esp32 * 4
 connection par wifi
 3D des chaques idées
 cable M/F - F/F - M/M
-Capteur température / GPS
+Capteur température / GPS / humidite
 
-Carte en C++ -> envoie de la donnée en .txt -> lecture de la donnée en python sur un site web (recuperation de la derniere ligne)
-fichier bash python pour le faire boucler
+ESP en C++ -> envoie de la donnée en .txt -> lecture de la donnée en php sur un site web (recuperation de la derniere ligne)
 
-stabiliser le site pour eviter que les données sur le site chagent trop souvent 
+stabiliser le site pour eviter que les données sur le site chagent trop souvent (donnee recu toutes les 15min)
 site web avec historique
 
-securisation du wifi en mettant un mot clé au debut de chaque nom 
-exemple - Hexagone - //// le mot "Hexagone -" est le mot clé et est accepte par le wifi tout en excluant les autres
+securisation de la selection des données via le wifi en mettant un mot clé au debut de chaque nom 
+exemple : Hexagone - //// le mot "Hexagone -" est le mot clé et est accepte par le wifi tout en excluant les autres
 
 limiter le nombre de ligne sur le fichier texte - maximum 96 lignes (1 donnee toutes les 15min pour 1 journee)
 a la 97e lignes, on sup la 1ere ligne (la plus ancienne)
@@ -24,7 +23,7 @@ besoin :
 ° module wifi / envoyer la donnee
 ° recevoir les donnees des capteurs 
 ° traiter, ajouter dans un fichier txt (limitation des lignes)
-° lire la donnee (Python), affiche HTML
+° lire la donnee (PHP), affiche HTML
 ° capteur humidité / temperateur / GPS 
 
 but :
